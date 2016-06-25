@@ -1,0 +1,58 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <h1>Sign up</h1>
+    </div>
+    <div class="col-sm-12">
+      <form class="form" name="form" ng-submit="vm.register(form)" novalidate>
+
+        <div class="form-group" ng-class="{ 'has-success': form.name.$valid && vm.submitted,
+                                            'has-error': form.name.$invalid && vm.submitted }">
+          <label>Name</label>
+
+          <input type="text" name="name" class="form-control" ng-model="vm.book.name"
+                 required/>
+          <p class="help-block" ng-show="form.name.$error.required && vm.submitted">
+            A name is required
+          </p>
+        </div>
+
+        <div class="form-group" ng-class="{ 'has-success': form.author.$valid && vm.submitted,
+                                            'has-error': form.author.$invalid && vm.submitted }">
+          <label>Author</label>
+
+          <input type="text" name="author" class="form-control" ng-model="vm.book.author"
+                 required/>
+          <p class="help-block" ng-show="form.author.$error.required && vm.submitted">
+            A name is required
+          </p>
+        </div>
+
+        <div class="form-group" ng-class="{ 'has-success': form.publisher.$valid && vm.submitted,
+                                            'has-error': form.publisher.$invalid && vm.submitted }">
+          <label>Publisher</label>
+
+          <input type="text" name="publisher" class="form-control" ng-model="vm.book.publisher"
+                 required/>
+          <p class="help-block" ng-show="form.publisher.$error.required && vm.submitted">
+            A name is required
+          </p>
+        </div>
+
+      
+
+
+
+        <div>
+          <button class="btn btn-inverse btn-lg btn-register" type="submit">
+            Sign up
+          </button>
+          
+        </div>
+
+      </form>
+    </div>
+  </div>
+  <hr>
+</div>
+
